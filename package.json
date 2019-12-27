@@ -1,5 +1,5 @@
 {
-  "name": "imgdefer",
+  "name": "@aliasproject/imgdefer",
   "version": "1.0.0",
   "description": "Vanilla JavaScript module to defer image load",
   "main": "./src/index.js",

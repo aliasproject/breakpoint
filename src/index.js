@@ -1,8 +1,8 @@
 function imgdefer() {
-  let elements = document.querySelectorAll("[data-lazy]");
+  let elements = document.querySelectorAll("[data-defer]");
 
   elements.forEach(function(node) {
-    let path = node.getAttribute("data-lazy");
+    let path = node.getAttribute("data-defer");
 
     if (node.nodeName === "IMG") {
       node.src = path;
