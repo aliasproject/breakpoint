@@ -15,7 +15,7 @@
     "es6",
     "defer"
   ],
-  "author": "Michael Aguiar <mike@aliasproject.com>",
+  "author": "Alias Project",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/aliasproject/imgdefer/issues"
