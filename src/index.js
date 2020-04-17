@@ -1,15 +1,33 @@
-function imgdefer() {
-  let elements = document.querySelectorAll("[data-defer]");
+function breakpoint() {
+  // Define Breakpoints / Viewport Width
+  let breakpoints = {
+    tablet: 768,
+    desktop: 1024,
+    desktophd: 1200,
+    widescreen: 1800,
+  };
+  let viewport_width = Math.max(
+    document.documentElement.clientWidth,
+    window.innerWidth || 0
+  );
 
-  elements.forEach(function(node) {
-    let path = node.getAttribute("data-defer");
-
-    if (node.nodeName === "IMG") {
-      node.src = path;
-    } else {
-      node.style.backgroundImage = "url(" + path + ")";
-    }
-  });
+  if (viewport_width < breakpoints.tablet) {
+    return "Mobile";
+  } else if (viewport_width < breakpoints.desktop) {
+    return "Tablet";
+  } else if (viewport_width < breakpoints.desktophd) {
+    return "Desktop";
+  } else if (viewport_width < breakpoints.widescreen) {
+    return "Desktop HD";
+  } else if (viewport_width >= breakpoints.widescreen) {
+    return "Widescreen";
+  }
 }
 
-export default imgdefer;
+// Reset breakpoint on window resize
+window.addEventListener("resize", function () {
+  active_breakpoint = breakpoint();
+});
+
+// Export functions
+export var active_breakpoint = breakpoint();

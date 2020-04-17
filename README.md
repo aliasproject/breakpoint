@@ -1,13 +1,9 @@
-# imgdefer
+# breakpoint
 
-Vanilla JavaScript module to defer image load
+Vanilla JavaScript module to detect active breakpoint
 
 ## Usage
 
-By default, each element with `data-defer` will defer loading of the `<img>` src or element `background-image`.
-
 ```js
-import imgdefer from "@aliasproject/imgdefer";
-
-imgdefer();
+import breakpoint from "@aliasproject/breakpoint";
 ```
