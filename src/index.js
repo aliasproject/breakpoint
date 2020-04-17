@@ -26,8 +26,8 @@ function breakpoint() {
 
 // Reset breakpoint on window resize
 window.addEventListener("resize", function () {
-  active_breakpoint = breakpoint();
+  breakpoint = breakpoint();
 });
 
 // Export functions
-export var active_breakpoint = breakpoint();
+export var breakpoint = breakpoint();
